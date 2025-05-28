@@ -6,7 +6,7 @@ vim.opt.tabstop = 4
 vim.opt.number = true
 vim.opt.relativenumber = true
 
-vim.lsp.enable("gopls")
+-- vim.lsp.enable("gopls")
 
 -- Enable `p` to also copy/paste to/from system clipboard
 vim.opt.clipboard = "unnamedplus"

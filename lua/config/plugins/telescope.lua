@@ -22,10 +22,13 @@ return {
       vim.keymap.set("n", "<space>ff", tb.find_files)
       vim.keymap.set("n", "<space>fh", tb.help_tags)
       vim.keymap.set("n", "<space>flr", tb.lsp_references)
+      vim.keymap.set("n", "<space>fld", tb.lsp_definitions)
+      vim.keymap.set("n", "<space>fli", tb.lsp_implementations)
+
       vim.keymap.set("n", "<space>fb", tb.buffers)
       -- vim.keymap.set("n", "<space>fg", tb.live_grep)
-      vim.keymap.set("n", "<space>fgbc", tb.git_bcommits)
-      vim.keymap.set("n", "<space>fgc", tb.git_commits)
+      -- vim.keymap.set("n", "<space>fgbc", tb.git_bcommits)
+      -- vim.keymap.set("n", "<space>fgc", tb.git_commits)
 
       vim.keymap.set("n", "<space>fn", function()
         require("telescope.builtin").find_files({

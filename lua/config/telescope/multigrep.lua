@@ -9,7 +9,7 @@ local live_multigrep = function(opts)
   opts = opts or {}
   opts.cwd = opts.cwd or vim.uv.cwd()
 
-  local finder = finders.new_async_job({
+  local finder = finders.new_async_job {
     command_generator = function(prompt)
       if not prompt or prompt == "" then
         return nil
@@ -35,22 +35,25 @@ local live_multigrep = function(opts)
       }
     end,
     entry_maker = make_entry.gen_from_vimgrep(opts),
-    cwd = opts.cwd,
-  })
+    cwd = opts.cwd
+  }
 
   pickers.new(opts, {
     debounce = 100,
-    prompt_title = "Multigrep",
+    prompt_title = "Multi Grep",
     finder = finder,
-    previewed = conf.grep_previewer(opts),
+    previewer = conf.grep_previewer(opts),
     sorter = require("telescope.sorters").empty(),
   }):find()
 end
 
 M.setup = function()
-  -- live_multigrep()
+  vim.keymap.set("n", "<leader>fg", live_multigrep)
+  -- vim.keymap.set("n", "<space>fo", function()
+  --   live_multigrep({
+  --     cwd = vim.fs.joinpath(vim.fn.expand("~"), "go/pkg/mod")
+  --   })
+  -- end)
 end
-
-live_multigrep()
 
 return M

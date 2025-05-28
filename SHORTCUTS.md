@@ -18,5 +18,4 @@ All shortcuts are in normal mode unless otherwise specified with a leading chara
 - "<space>fd" - Find Files
 - "<space>fr" - Find References
 - "<space>fb" - Find Buffers
-- "<space>fgbc" - Find Git Commits for Current Buffer
-- "<space>fgc" - Find Git Commits
+- "<space>fg" - Multigrep

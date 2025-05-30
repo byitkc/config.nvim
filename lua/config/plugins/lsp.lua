@@ -24,6 +24,7 @@ return {
       }
       require("lspconfig").lua_ls.setup(opts)
       require("lspconfig").gopls.setup(opts)
+      require("lspconfig").templ.setup(opts)
 
       vim.api.nvim_create_autocmd('LspAttach', {
         group = vim.api.nvim_create_augroup('my.lsp', {}),

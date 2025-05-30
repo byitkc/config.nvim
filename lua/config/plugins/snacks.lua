@@ -8,7 +8,7 @@ return {
         enabled = true,
         timeout = 3000,
       },
-      scroll = { enabled = true },
+      -- scroll = { enabled = true },
     },
     keys = {
       { "<leader>un", function() Snacks.notifier.hide() end, desc = "Dismiss all notifications" },

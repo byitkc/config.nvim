@@ -16,7 +16,7 @@ return {
           ["<C-j>"] = false,
           ["<M-h>"] = "actions.select_split",
         },
-        view_options = { show_hidden = true },
+        view_options = { show_hidden = false },
         win_options = {
           signcolumn = "yes:2"
         },

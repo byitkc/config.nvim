@@ -5,7 +5,7 @@ vim.api.nvim_create_autocmd("BufWritePost", {
   callback = function()
     local filepath = vim.fn.expand("%:p")
 
-    -- If the file is a `templ` generate `.go` file we will skip `goimports` as it
+    -- If the file is a `templ` generated `.go` file we will skip `goimports` as it
     -- overrides the templ formatting from `templ generate` on the file.
     local path_table = vim.fn.split(filepath, "/")
     local filename = path_table[#path_table]

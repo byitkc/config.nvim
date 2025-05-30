@@ -1,4 +1,4 @@
 local set = vim.opt_local
 set.shiftwidth = 4
-set.number = false
+set.number = true
 set.relativenumber = false

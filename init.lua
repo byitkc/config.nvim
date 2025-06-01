@@ -1,5 +1,6 @@
 require("config.lazy")
 require("config.autocmd")
+require("config.keymap")
 
 -- Setting default editor settings
 vim.opt.shiftwidth = 4

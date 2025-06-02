@@ -2,6 +2,9 @@ require("config.lazy")
 require("config.autocmd")
 require("config.keymap")
 
+vim.lsp.enable("tailwindcss")
+-- vim.lsp.enable("html")
+
 -- Setting default editor settings
 vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4

@@ -21,6 +21,8 @@ return {
           signcolumn = "yes:2"
         },
       })
+      local o = require("oil")
+      vim.keymap.set("n", "<space>ot", o.toggle_float)
     end,
     dependencies = {
       "nvim-tree/nvim-web-devicons",

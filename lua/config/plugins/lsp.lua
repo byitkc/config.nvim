@@ -25,14 +25,14 @@ return {
       require("lspconfig").lua_ls.setup(opts)
       require("lspconfig").gopls.setup(opts)
       require("lspconfig").templ.setup(opts)
-      require("lspconfig").tailwindcss.setup({})
-      local html_opts = {
-        filetypes = {
-          "html",
-        },
-        provideFormatter = false,
-      }
-      require("lspconfig").html.setup(html_opts)
+      require("lspconfig").tailwindcss.setup(opts)
+      -- local html_opts = {
+      --   filetypes = {
+      --     "html",
+      --   },
+      --   provideFormatter = false,
+      -- }
+      -- require("lspconfig").html.setup(opts)
 
       vim.api.nvim_create_autocmd('LspAttach', {
         group = vim.api.nvim_create_augroup('my.lsp', {}),

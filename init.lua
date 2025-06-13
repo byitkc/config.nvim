@@ -11,6 +11,8 @@ vim.opt.tabstop = 4
 vim.opt.number = true
 vim.opt.relativenumber = true
 
+vim.opt.cursorline = true
+
 -- vim.lsp.enable("gopls")
 
 -- Enable `p` to also copy/paste to/from system clipboard

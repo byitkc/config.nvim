@@ -12,6 +12,7 @@ return {
     },
     keys = {
       { "<leader>un", function() Snacks.notifier.hide() end, desc = "Dismiss all notifications" },
+      { "<leader>lg", function() Snacks.lazygit() end,       desc = "Open Lazygit" },
     }
   }
 }

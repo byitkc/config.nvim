@@ -49,3 +49,6 @@ vim.keymap.set("n", "<space>st", function()
     job_id = vim.bo.channel
 end)
 
+vim.keymap.set("n", "<space>example", function()
+    vim.fn.chansend(job_id, { "ls -al\r\n" })
+end)

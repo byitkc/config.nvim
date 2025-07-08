@@ -34,6 +34,7 @@ return {
       -- }
       -- require("lspconfig").html.setup(opts)
       vim.api.nvim_set_keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", { noremap = true, silent = true })
+      vim.api.nvim_set_keymap("n", "<leader>od", "<cmd>lua vim.diagnostic.open_float()<CR>", {})
 
       vim.api.nvim_create_autocmd('LspAttach', {
         group = vim.api.nvim_create_augroup('my.lsp', {}),

@@ -15,7 +15,7 @@ return {
         },
         extensions = {
           fzf = {}
-        }
+        },
       })
       local tb = require("telescope.builtin")
       require("telescope").load_extension("fzf")

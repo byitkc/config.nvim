@@ -4,5 +4,6 @@ return {
     config = function()
       require("auto-save").setup({})
     end,
+    trigger_events = { "InsertLeave" },
   }
 }
